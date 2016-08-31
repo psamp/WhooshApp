@@ -29,9 +29,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs7-zI-YUW">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="stored: 0">
+                                <state key="normal" title="stored: none">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="store:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tl1-QK-BMv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jte-ve-NZb">
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,12 +64,19 @@
                             <constraint firstItem="oxv-wt-vhg" firstAttribute="width" secondItem="jte-ve-NZb" secondAttribute="width" id="Szv-G5-DUO"/>
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="bs7-zI-YUW" secondAttribute="width" id="VpQ-AG-ib1"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="top" secondItem="oxv-wt-vhg" secondAttribute="bottom" constant="8" id="Wj9-9B-VK7"/>
+                            <constraint firstItem="oxv-wt-vhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="152.5" id="ZRb-Z5-dAf"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="width" secondItem="FAq-aH-mqx" secondAttribute="width" id="c42-YY-DK2"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="trailing" secondItem="FAq-aH-mqx" secondAttribute="trailing" id="f16-kI-cLj"/>
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:3" id="fS9-yH-59n"/>
                             <constraint firstItem="bs7-zI-YUW" firstAttribute="height" secondItem="FAq-aH-mqx" secondAttribute="height" id="zav-E6-UGv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="jte-ve-NZb" id="ce9-b0-JbS"/>
+                        <outlet property="labelsTopConstraint" destination="ZRb-Z5-dAf" id="OHu-x8-VQG"/>
+                        <outlet property="textField" destination="FAq-aH-mqx" id="kdM-Vu-1QA"/>
+                        <outlet property="topLabel" destination="oxv-wt-vhg" id="dkT-zI-7zK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
