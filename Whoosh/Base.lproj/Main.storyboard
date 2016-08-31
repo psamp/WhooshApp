@@ -1,26 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a sentence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-aH-mqx">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs7-zI-YUW">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="stored: 0">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jte-ve-NZb">
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxv-wt-vhg">
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bs7-zI-YUW" firstAttribute="centerX" secondItem="FAq-aH-mqx" secondAttribute="centerXWithinMargins" id="2KA-aA-ZWb"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="top" secondItem="jte-ve-NZb" secondAttribute="bottom" constant="8" id="2f2-Z7-Erp"/>
+                            <constraint firstItem="oxv-wt-vhg" firstAttribute="centerX" secondItem="jte-ve-NZb" secondAttribute="centerX" id="4fX-S5-9Go"/>
+                            <constraint firstItem="bs7-zI-YUW" firstAttribute="top" secondItem="FAq-aH-mqx" secondAttribute="bottom" constant="8" id="6Kp-CQ-zfU"/>
+                            <constraint firstItem="jte-ve-NZb" firstAttribute="height" secondItem="FAq-aH-mqx" secondAttribute="height" id="9kY-pW-NXU"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="Bui-sh-dm6"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:15" id="CPc-R4-vI2"/>
+                            <constraint firstItem="oxv-wt-vhg" firstAttribute="height" secondItem="jte-ve-NZb" secondAttribute="height" id="DM1-ot-Hny"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" id="IqB-ie-Psa"/>
+                            <constraint firstItem="jte-ve-NZb" firstAttribute="leading" secondItem="FAq-aH-mqx" secondAttribute="leading" id="No1-5f-KTt"/>
+                            <constraint firstItem="oxv-wt-vhg" firstAttribute="width" secondItem="jte-ve-NZb" secondAttribute="width" id="Szv-G5-DUO"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="bs7-zI-YUW" secondAttribute="width" id="VpQ-AG-ib1"/>
+                            <constraint firstItem="jte-ve-NZb" firstAttribute="top" secondItem="oxv-wt-vhg" secondAttribute="bottom" constant="8" id="Wj9-9B-VK7"/>
+                            <constraint firstItem="jte-ve-NZb" firstAttribute="width" secondItem="FAq-aH-mqx" secondAttribute="width" id="c42-YY-DK2"/>
+                            <constraint firstItem="jte-ve-NZb" firstAttribute="trailing" secondItem="FAq-aH-mqx" secondAttribute="trailing" id="f16-kI-cLj"/>
+                            <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:3" id="fS9-yH-59n"/>
+                            <constraint firstItem="bs7-zI-YUW" firstAttribute="height" secondItem="FAq-aH-mqx" secondAttribute="height" id="zav-E6-UGv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

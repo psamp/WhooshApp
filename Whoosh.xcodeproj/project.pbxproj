@@ -505,6 +505,7 @@
 				74804E831D76343F0063B507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74804E841D76343F0063B507 /* Build configuration list for PBXNativeTarget "WhooshTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				74804E861D76343F0063B507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74804E871D76343F0063B507 /* Build configuration list for PBXNativeTarget "WhooshUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +523,7 @@
 				74804E891D76343F0063B507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
