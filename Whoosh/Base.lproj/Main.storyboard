@@ -59,12 +59,11 @@
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="Bui-sh-dm6"/>
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:15" id="CPc-R4-vI2"/>
                             <constraint firstItem="oxv-wt-vhg" firstAttribute="height" secondItem="jte-ve-NZb" secondAttribute="height" id="DM1-ot-Hny"/>
-                            <constraint firstItem="FAq-aH-mqx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" id="IqB-ie-Psa"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="leading" secondItem="FAq-aH-mqx" secondAttribute="leading" id="No1-5f-KTt"/>
                             <constraint firstItem="oxv-wt-vhg" firstAttribute="width" secondItem="jte-ve-NZb" secondAttribute="width" id="Szv-G5-DUO"/>
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="bs7-zI-YUW" secondAttribute="width" id="VpQ-AG-ib1"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="top" secondItem="oxv-wt-vhg" secondAttribute="bottom" constant="8" id="Wj9-9B-VK7"/>
-                            <constraint firstItem="oxv-wt-vhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="152.5" id="ZRb-Z5-dAf"/>
+                            <constraint firstItem="oxv-wt-vhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZRb-Z5-dAf"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="width" secondItem="FAq-aH-mqx" secondAttribute="width" id="c42-YY-DK2"/>
                             <constraint firstItem="jte-ve-NZb" firstAttribute="trailing" secondItem="FAq-aH-mqx" secondAttribute="trailing" id="f16-kI-cLj"/>
                             <constraint firstItem="FAq-aH-mqx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:3" id="fS9-yH-59n"/>
@@ -73,7 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomLabel" destination="jte-ve-NZb" id="ce9-b0-JbS"/>
-                        <outlet property="labelsTopConstraint" destination="ZRb-Z5-dAf" id="OHu-x8-VQG"/>
+                        <outlet property="labelsTopConstraint" destination="ZRb-Z5-dAf" id="fsS-C8-RO8"/>
                         <outlet property="textField" destination="FAq-aH-mqx" id="kdM-Vu-1QA"/>
                         <outlet property="topLabel" destination="oxv-wt-vhg" id="dkT-zI-7zK"/>
                     </connections>

@@ -11,11 +11,14 @@
 @interface ViewController () <UITextFieldDelegate>
 @property(strong, nonatomic) NSMutableArray *sentences;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *labelsTopConstraint;
+@property (nonatomic, readwrite) CGFloat originalConstraint;
 @property (strong, nonatomic) IBOutlet UILabel *topLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bottomLabel;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+
 - (IBAction)store:(UIButton *)sender;
 - (void)addSentence:(UIButton *)sender;
+-(void)reset:(UIButton*)sender;
 
 @end
 
@@ -24,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.sentences = [NSMutableArray array];
+    self.originalConstraint = self.labelsTopConstraint.constant;
 }
 
 
@@ -43,13 +47,30 @@
 }
 
 - (IBAction)store:(UIButton *)sender {
+    if(self.sentences.count <= 1) {
         [self addSentence:sender];
+    } else if(self.labelsTopConstraint.constant == self.originalConstraint){
+        CGFloat target = self.labelsTopConstraint.constant + 200;
+        
+        [UIView animateWithDuration:2
+                         animations:^{
+                             self.labelsTopConstraint.constant = target;
+                             [self.view layoutSubviews];
+                         } completion:^(BOOL finished) {
+                             if(finished) {
+                                 [sender setTitle:@"reset" forState:UIControlStateNormal];
+                             }
+                             
+                         }];
+    } else {
+        [self reset:sender];
+        
+    }
+    
 }
 
 -(void)addSentence:(UIButton *)sender {
     NSString *text = self.textField.text;
-    
-    NSLog(@"%@", @(self.sentences.count));
     
     if(self.sentences.count == 0) {
         [self.sentences insertObject:text atIndex:0];
@@ -64,5 +85,14 @@
         [sender setTitle:[NSString stringWithFormat:@"stored: %@", @(self.sentences.count)]
                 forState:UIControlStateNormal];
     }
+}
+
+-(void)reset:(UIButton*)sender {
+    self.labelsTopConstraint.constant = self.originalConstraint;
+    self.topLabel.text = @"";
+    self.bottomLabel.text = @"";
+    [self.sentences removeAllObjects];
+    
+    [sender setTitle:@"stored: none" forState:UIControlStateNormal];
 }
 @end
